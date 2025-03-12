@@ -1,0 +1,395 @@
+/* swiper */
+.swiper {
+    width: 80%;
+    height: 450px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.swiper:active{
+    box-shadow: 0px 0px 50px #48a1ff;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background: #007aff;
+    color: white;
+}
+
+.swiper-wrapper{
+    height: 450px;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #333 !important;
+    margin: 5px;
+    border-radius: 200px;
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.swiper-slide img:hover{
+    transform: scale(1.1);
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: end;
+    height: 650px;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+/* General Styles */
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: #fff;
+    color: #000;
+    position: fixed;
+    padding: 10px 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.menu-button {
+    display: none;
+    background: #48a1ff;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    header{
+        height: auto;
+        flex-direction: row;
+    }
+    .menu-button {
+        display: block;
+    }
+    nav ul {
+        margin-top: -300px;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 30px 0 30px 0;
+        gap: 15px;
+    }
+    .show {
+        margin-top: 30px;
+    }
+}
+
+/* Sections */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 80px 5% 20px 5%;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.categories{
+    background-attachment: fixed;
+    flex-direction: column;
+    display: flex;
+}
+
+.categories_1{
+    height: auto;
+    color: #fff;
+    background-image: url('assets/bg.png');
+}
+
+.categories:nth-child(2){
+    background-color: #fff;
+    color: #000;
+    height: auto;
+}
+
+.categories a{
+    color: #000;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+}
+
+.card h3{
+    font-size: 23px;
+}
+
+p{
+    width: 85%;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: white;
+    background: #000;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button a{
+    color: #fff;
+}
+
+button:hover {
+    background: #182848;
+}
+
+/* Footer */
+footer{
+    background: #182848;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 100px 30px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 20px;
+    max-width: 380px;
+} 
+
+footer ul{
+    margin-left: -40px;
+}
+
+footer ul li{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+footer ul li:nth-child(1){
+    margin: -40px 0 0 0;
+}
+
+footer ul li h3{
+    margin-top: 17px;
+    font-size: 17px;
+}
+
+footer div ul li a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 17px;
+}
+
+footer ul li a i{
+    font-size: 6em;
+}
+
+.p-m li{
+    align-items: center;
+}
+
+hr{
+    width: 90%;
+}
+
+/* Responsive Design */
+@media (max-width:1000px) {
+    footer{
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+    header{
+        flex-direction: row;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+    form {
+        width: 70%;
+    }
+    form input, form textarea {
+        font-size: 1.2rem;
+        padding: 15px 10px;
+    }
+    button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        margin: 0;
+    }
+}
+
+@media (max-width:550px) {
+    footer{
+        justify-content: space-evenly;
+        gap: 50px;
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+    }
+    #contact{
+        max-width: 80%;
+    }
+
+    #contact li{
+        max-width:700%;
+    }
+}
+
+@media (max-width:400px) {
+    header{
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    #nav-links{
+        /* margin-top: 90px; */
+        background: transparent;
+    }
+
+    .margin{
+        margin-top: 130px;
+    }
+
+    .show{
+        margin-top: 90px;
+    }
+}

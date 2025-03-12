@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="logo img">
+             <h2>Name</h2>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Categories</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="btn-ctn" id="btn">
+            <button><a href="">Contact</a></button>
+        </div>
+    </header> 
+
+    <main class="banner">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/swiper-1.png" alt="swiper-img"></div>
+                <div class="swiper-slide"><img src="assets/swiper-2.png" alt="swiper-img"></div>
+                <div class="swiper-slide"><img src="assets/swiper-3.png" alt="swiper-img"></div>
+                <div class="swiper-slide"><img src="assets/swiper-4.png" alt="swiper-img"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>         
+            <form id="styledForm" action="https://formspree.io/f/xzzdqlqw" method="POST">
+                <div class="info">
+                    <h1 data-value="productname">Productname</h1>
+                <p>thisisproductbiothatshouldbechangedwhileworkingwithit</p>
+        
+                <div class="price">
+                    <del>mainprice</del>
+                    <b>price</b>
+                </div>
+                <h2>COLOUR</h2>
+                </div>
+                <!-- Carousel for selecting options -->
+                <div class="carousel">
+                    <div class="item option-bg-1" data-value="option1">Option 1</div>
+                    <div class="item option-bg-2" data-value="option2">Option 2</div>
+                    <div class="item option-bg-3" data-value="option3">Option 3</div>
+                    <div class="item option-bg-4" data-value="option4">Option 4</div>
+                    <div class="item option-bg-5" data-value="option5">Option 5</div>
+                </div>
+        
+                <!-- Hidden input to store the selected option -->
+                <input type="hidden" name="selected_option" id="selectedOption" required>
+<!--         
+                <input type="number" name="quantity" id="quantityInput" class="input-field" placeholder="Enter quantity" min-value="1" max-value="5" required> -->
+                <input type="hidden" name="quantity" id="quantityInput" value="1" required>
+
+                <div name="quantity" class="quantity">
+                    <button type="button" onclick="minus()">-</button>
+                    <div id="quantity">1</div>
+                    <button type="button" onclick="plus()">+</button>
+                </div> 
+                </div>
+                
+                <input type="tel" name="phone" id="phoneInput" class="input-field" placeholder="Enter phone number" required>
+        
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+
+    
+    </main>
+
+
+    <footer>
+        <div>
+            <h2>About Us</h2>
+            <p>Hamro Sano Ecommerce is an online platform designed to help businesses create and manage their own e-commerce stores with ease. It provides a suite of tools and features that enable users to set up an online shop, manage products, process orders, and handle customer interactions.</p>
+        </div>
+        <div id="contact">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>
+                    <h3>PHONE:</h3>
+                    <p>+977 9898989898</p>
+                </li>
+                <li>
+                    <h3>EMAIL:</h3>
+                    <p>info@hamnrosanoecommerce.com</p>
+                </li>
+                <li>
+                    <h3>WORKING DAYS/HOURS:</h3>
+                    <p>Sun - Friday / 10AM - 6PM</p>
+                </li>
+            </ul>
+        </div>
+        <div id="blog">
+            <h2>Follow Us On</h2>
+            <ul class="p-m">
+                <li>
+                    <i class='bx bxl-facebook'></i>
+                    <p>Facebook</p>
+                </li>
+                <li>
+                    <i class='bx bxl-twitter' ></i>
+                    <p>Twitter</p>
+                </li>
+                <li>
+                    <i class='bx bxl-instagram' ></i>
+                    <p>Instagram</p>
+                </li>
+            </ul>
+        </div>
+        
+    </footer>
+
+    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
