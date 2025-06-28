@@ -42,4 +42,4 @@ MIT
 
 ---
 
-> A simple, extendable ecommerce website built with HTML, CSS, and JavaScript.
+> A simple, extendable ecommerce website built using HTML, CSS, and JavaScript.
